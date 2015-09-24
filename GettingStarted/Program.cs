@@ -3,26 +3,7 @@ using Akka.Actor;
 
 namespace GettingStarted
 {
-    public class Greet
-    {
-        public Greet(string who)
-        {
-            Who = who;
-        }
-
-        public string Who { get; }
-    }
-
-    public class GreetingActor : ReceiveActor
-    {
-        public GreetingActor()
-        {
-            Receive<Greet>(greet =>
-                           Console.WriteLine("Hello {0}", greet.Who));
-        }
-    }
-
-    internal class Program
+    internal static class Program
     {
         private static void Main(string[] args)
         {
