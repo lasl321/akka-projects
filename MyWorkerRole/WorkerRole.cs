@@ -2,6 +2,7 @@ using System.Diagnostics;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
+using Akka.Actor;
 using Microsoft.WindowsAzure.ServiceRuntime;
 
 namespace MyWorkerRole
@@ -10,6 +11,7 @@ namespace MyWorkerRole
     {
         private readonly CancellationTokenSource cancellationTokenSource = new CancellationTokenSource();
         private readonly ManualResetEvent runCompleteEvent = new ManualResetEvent(false);
+        private ActorSystem _actorSystem;
 
         public override void Run()
         {
@@ -27,6 +29,9 @@ namespace MyWorkerRole
 
         public override bool OnStart()
         {
+            // Setup the Actor System
+            _actorSystem = ActorSystem.Create("MySystem");
+
             // Set the maximum number of concurrent connections
             ServicePointManager.DefaultConnectionLimit = 12;
 
@@ -47,6 +52,9 @@ namespace MyWorkerRole
             cancellationTokenSource.Cancel();
             runCompleteEvent.WaitOne();
 
+            // Shutdown the Actor System
+            _actorSystem.Shutdown();
+
             base.OnStop();
 
             Trace.TraceInformation("MyWorkerRole has stopped");
@@ -54,6 +62,12 @@ namespace MyWorkerRole
 
         private async Task RunAsync(CancellationToken cancellationToken)
         {
+            // Create an instance to the top-level user Actor
+            var workerRoleActor = _actorSystem.ActorOf<WorkerRoleActor>("WorkerRole");
+
+            // Send a message to the Actor
+            workerRoleActor.Tell(new WorkerRoleMessage("Hello World!"));
+
             // TODO: Replace the following with your own logic.
             while (!cancellationToken.IsCancellationRequested)
             {
