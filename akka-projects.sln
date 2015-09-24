@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStarted", "GettingSt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{A5C5509F-EE90-434E-8AFD-7E0B7434E486}"
 EndProject
+Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "WorkerRole", "WorkerRole\WorkerRole.ccproj", "{6F06017C-C931-4190-88C5-6B659B187C9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWorkerRole", "MyWorkerRole\MyWorkerRole.csproj", "{1B716649-FA23-4F62-9E0E-B2048EE1BF27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{A5C5509F-EE90-434E-8AFD-7E0B7434E486}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5C5509F-EE90-434E-8AFD-7E0B7434E486}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5C5509F-EE90-434E-8AFD-7E0B7434E486}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F06017C-C931-4190-88C5-6B659B187C9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F06017C-C931-4190-88C5-6B659B187C9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F06017C-C931-4190-88C5-6B659B187C9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F06017C-C931-4190-88C5-6B659B187C9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B716649-FA23-4F62-9E0E-B2048EE1BF27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B716649-FA23-4F62-9E0E-B2048EE1BF27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B716649-FA23-4F62-9E0E-B2048EE1BF27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B716649-FA23-4F62-9E0E-B2048EE1BF27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
