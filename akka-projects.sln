@@ -11,6 +11,8 @@ Project("{CC5FD16D-436D-48AD-A40C-5A424C6E3E79}") = "WorkerRole", "WorkerRole\Wo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWorkerRole", "MyWorkerRole\MyWorkerRole.csproj", "{1B716649-FA23-4F62-9E0E-B2048EE1BF27}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchableBehaviors", "SwitchableBehaviors\SwitchableBehaviors.csproj", "{26934090-2D14-4F84-86D4-A62AB9EAB68F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{1B716649-FA23-4F62-9E0E-B2048EE1BF27}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B716649-FA23-4F62-9E0E-B2048EE1BF27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B716649-FA23-4F62-9E0E-B2048EE1BF27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26934090-2D14-4F84-86D4-A62AB9EAB68F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26934090-2D14-4F84-86D4-A62AB9EAB68F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26934090-2D14-4F84-86D4-A62AB9EAB68F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26934090-2D14-4F84-86D4-A62AB9EAB68F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

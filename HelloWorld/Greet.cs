@@ -6,6 +6,7 @@
         {
             Who = who;
         }
-        public string Who { get; private set; }
+
+        public string Who { get; }
     }
 }
